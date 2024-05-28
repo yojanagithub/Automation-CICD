@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="All Test Suite" parallel="methods" >
+    <listeners>
+        <listener class-name="selenium.TestComponents.Listeners"></listener>
+    </listeners>
+<!--    <groups>-->
+<!--        <run>-->
+<!--            <include name="purchase"></include>-->
+<!--        </run>-->
+<!--    </groups>-->
+    <test thread-count="5" name="submit otrder">
+        <classes>
+            <!--            <class name="test1.Day1">-->
+            <!--            </class>-->
+            <class name="selenium.Test.SubmitOrderTest"></class>
+
+        </classes>
+    </test>
+    <test thread-count="5" name="Error validation test">
+        <classes>
+            <class name="selenium.Test.ErrorValidation"></class>
+        </classes>
+    </test>
+
+</suite>
